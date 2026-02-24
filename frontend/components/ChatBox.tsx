@@ -115,7 +115,7 @@ export function ChatBox() {
               <Key className="size-5 text-primary" />
             </div>
             <div className="text-center">
-              <p className="font-serif text-lg italic">Enable AI browsing</p>
+              <p className="font-display text-lg">Enable AI browsing</p>
               <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
                 Enter your Anthropic API key to<br />chat with Claude
               </p>
@@ -161,7 +161,7 @@ export function ChatBox() {
           </div>
         ) : messages.length === 0 ? (
           <div className="flex h-full items-center justify-center">
-            <p className="font-serif text-sm italic text-muted-foreground">
+            <p className="font-display text-sm text-muted-foreground">
               Ask Claude to browse for you...
             </p>
           </div>
@@ -171,7 +171,7 @@ export function ChatBox() {
               msg.sender === "user" ? (
                 <div
                   key={msg.id}
-                  className="ml-auto max-w-[85%] rounded-2xl bg-[#3a3633] px-4 py-2.5 text-[15px] leading-relaxed text-foreground"
+                  className="ml-auto max-w-[85%] rounded-2xl bg-secondary px-4 py-2.5 text-[15px] leading-relaxed text-foreground"
                 >
                   {msg.text}
                 </div>

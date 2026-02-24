@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { sansFont, monoFont, displayFont } from "@/lib/fonts";
 import "@/styles/globals.css";
 
 export const metadata = {
@@ -16,7 +17,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className="scroll-smooth antialiased"
+      className={`scroll-smooth antialiased ${sansFont.variable} ${monoFont.variable} ${displayFont.variable}`}
     >
       <body className="bg-background text-foreground overflow-x-hidden">
         <ThemeProvider

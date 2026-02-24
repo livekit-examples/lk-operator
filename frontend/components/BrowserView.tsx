@@ -12,7 +12,6 @@ import { useAgentCursor } from "@/lib/useAgentCursor";
 import { FocusButton } from "./FocusButton";
 import { FocusIndicator } from "./FocusIndicator";
 import { AgentCursor } from "./AgentCursor";
-import { ClaudeMascot } from "./ClaudeMascot";
 
 export function BrowserView() {
   const tracks = useTracks([Track.Source.ScreenShare]);
@@ -120,7 +119,6 @@ export function BrowserView() {
 
       {/* Browser viewport */}
       <div ref={videoContainerRef} className="relative min-h-0 flex-1 overflow-hidden bg-background">
-        {browserTrack && <ClaudeMascot videoEl={videoEl} viewportEl={viewportEl} />}
         {browserTrack ? (
           <div className="relative h-full w-full overflow-hidden rounded-lg border border-border/50 shadow-lg shadow-black/20">
             <VideoTrack
@@ -138,7 +136,7 @@ export function BrowserView() {
         ) : (
           <div className="flex h-full flex-col items-center justify-center gap-3">
             <div className="h-6 w-6 animate-spin rounded-full border-2 border-border border-t-primary" />
-            <span className="font-serif text-sm italic text-muted-foreground">
+            <span className="font-display text-sm text-muted-foreground">
               Connecting to browser...
             </span>
           </div>

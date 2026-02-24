@@ -36,7 +36,7 @@ export default function Home() {
     <div className="dotted-bg flex min-h-screen flex-col items-center justify-center p-4">
       {/* Heading */}
       <div className="mb-8 text-center">
-        <h1 className="font-serif text-4xl italic text-foreground">
+        <h1 className="font-display text-4xl text-foreground">
           Browse the web with AI
         </h1>
         <p className="mt-3 flex items-center justify-center gap-1.5 text-sm text-muted-foreground">

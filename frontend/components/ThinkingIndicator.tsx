@@ -6,7 +6,7 @@ import type { AgentStatus } from "@/lib/useBrowserChat";
 const GERUNDS = [
   "Thinking",
   "Pondering",
-  "Clauding",
+  "Processing",
   "Reasoning",
   "Considering",
   "Analyzing",
