@@ -1,0 +1,144 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+  --background: #faf9f5;
+  --foreground: #2c2c2c;
+  --card: #f5f4ed;
+  --card-foreground: #2c2c2c;
+  --popover: #f0efe8;
+  --popover-foreground: #2c2c2c;
+  --primary: #d97757;
+  --primary-foreground: #faf9f5;
+  --secondary: #eeeee6;
+  --secondary-foreground: #2c2c2c;
+  --muted: #eeeee6;
+  --muted-foreground: #78756d;
+  --accent: #d97757;
+  --accent-foreground: #faf9f5;
+  --destructive: #e54d2e;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: rgba(0, 0, 0, 0.10);
+  --ring: #d97757;
+  --dot-color: rgba(0, 0, 0, 0.06);
+}
+
+.dark {
+  --background: #1e1c1a;
+  --foreground: #e8e6e3;
+  --card: #2b2825;
+  --card-foreground: #e8e6e3;
+  --popover: #343130;
+  --popover-foreground: #e8e6e3;
+  --primary: #d97757;
+  --primary-foreground: #1c1a18;
+  --secondary: #343130;
+  --secondary-foreground: #e8e6e3;
+  --muted: #343130;
+  --muted-foreground: #9a9690;
+  --accent: #d97757;
+  --accent-foreground: #e8e6e3;
+  --destructive: #e54d2e;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.10);
+  --ring: #d97757;
+  --dot-color: #3f3b37;
+}
+
+@theme inline {
+  --font-sans:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-serif:
+    "Georgia", "Times New Roman", "Times", serif;
+  --font-chat:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes focus-pulse {
+  0%, 100% { box-shadow: 0 0 6px 0 rgba(217, 119, 87, 0); }
+  50% { box-shadow: 0 0 5px 2px rgba(217, 119, 87, 0.6); }
+}
+
+@keyframes scuttle-leg1 {
+  0% { transform: translateY(0); }
+  33% { transform: translateY(-6px); }
+  66% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+@keyframes scuttle-leg2 {
+  0% { transform: translateY(0); }
+  33% { transform: translateY(0); }
+  66% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Chat panel — sans-serif override */
+.chat-panel {
+  font-family: var(--font-chat);
+}
+
+/* Markdown prose in chat */
+.chat-prose { font-family: var(--font-chat); }
+.chat-prose p { margin: 0.3em 0; }
+.chat-prose p:first-child { margin-top: 0; }
+.chat-prose p:last-child { margin-bottom: 0; }
+.chat-prose strong { font-weight: 600; }
+.chat-prose em { font-style: italic; }
+.chat-prose ul { margin: 0.5em 0; padding-left: 1.2em; list-style-type: disc; }
+.chat-prose ol { margin: 0.5em 0; padding-left: 1.2em; list-style-type: decimal; }
+.chat-prose li { margin: 0.3em 0; }
+.chat-prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--muted); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.85em;
+}
+.chat-prose pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: var(--muted); padding: 0.75em; border-radius: 8px; margin: 0.5em 0; overflow-x: auto;
+}
+.chat-prose pre code { background: none; padding: 0; }
+.chat-prose a { color: var(--primary); text-decoration: underline; }
+
+/* Claude-style dotted grid background with vignette baked in */
+.dotted-bg {
+  background-image:
+    radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-color: var(--background);
+  box-shadow: inset 0 0 200px 80px rgba(0, 0, 0, 0.35);
+}
