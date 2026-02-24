@@ -34,3 +34,8 @@ htmlcov/
 
 # mypy
 .mypy_cache/
+
+# LK serverless agents
+.dockerignore
+Dockerfile
+livekit.toml
