@@ -23,5 +23,6 @@ This is an example of an agentic browser application inspired by OpenAI's [Opera
 2. `npm i`
 3. `cp ../agent/.env ./.env.local`
 4. `npm run dev`
-5. open localhost:3000 (or which port your webserver is running on)
+5. open your browser to `http://localhost:3000` (or which port your webserver is running on)
+
 
