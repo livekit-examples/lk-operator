@@ -1,3 +1,5 @@
+# LiveKit Operator
+
 This is an example of an agentic browser application inspired by OpenAI's [Operator](https://openai.com/index/introducing-operator/). It demonstrates a LiveKit agent that can:
 
 - spawn a headless browser instance with a playwright interface
@@ -22,3 +24,4 @@ This is an example of an agentic browser application inspired by OpenAI's [Opera
 3. `cp ../agent/.env ./.env.local`
 4. `npm run dev`
 5. open localhost:3000 (or which port your webserver is running on)
+
