@@ -1,4 +1,5 @@
 python-dotenv
 livekit-agents>=1.4.3
+livekit-agents[images]
 livekit-plugins-browser>=0.1.4
 livekit-plugins-anthropic>=1.4.3
