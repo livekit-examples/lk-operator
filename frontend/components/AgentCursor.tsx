@@ -15,7 +15,7 @@ export function AgentCursor({ cursor, videoEl }: AgentCursorProps) {
   const x = useSpring(useMotionValue(0), springConfig);
   const y = useSpring(useMotionValue(0), springConfig);
   const [clicking, setClicking] = useState(false);
-  const clickTimeoutRef = useRef<ReturnType<typeof setTimeout>>();
+  const clickTimeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   useEffect(() => {
     if (!cursor.visible || !videoEl) return;
