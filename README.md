@@ -1,3 +1,6 @@
+> [!WARNING]
+> This example is archived and no longer maintained. For current examples, see [LiveKit Agents examples](https://github.com/livekit/agents/tree/main/examples) and [agent-starter-react](https://github.com/livekit-examples/agent-starter-react).
+
 # LiveKit Operator
 
 This is an example of an agentic browser application inspired by OpenAI's [Operator](https://openai.com/index/introducing-operator/). It demonstrates a LiveKit agent that can:
